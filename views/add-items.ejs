@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Item Management System</title>
+    <link rel="stylesheet" href="styles/add-items.css">
+</head>
+
+<body>
+    <!-- <header> -->
+        <%- include('admin-nav.ejs') %>
+    <!-- </header> -->
+    <main>
+        <div class="form-container">
+            <h2>Add Food Item</h2>
+            <form id="addFoodForm" action="/additemsC" method="post">
+                <label for="name">Food Name:</label>
+                <input type="text" id="foodName" name="name" required>
+
+                <label for="description">Food Description:</label>
+                <input type="text" id="foodDescription" name="description" required>
+
+                <label for="servings">Number of Servings:</label>
+                <input type="text" id="numberOfServings" name="servings" required>
+
+                <label for="price">Food Rate:</label>
+                <input type="number" id="foodRate" name="price" required>
+
+                <!-- <label for="foodImage">Upload Image:</label>
+                <input type="file" id="foodImage" name="foodImage"> -->
+
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

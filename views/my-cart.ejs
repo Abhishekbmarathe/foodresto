@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Details</title>
+    <style>
+        /* Basic styling for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: black;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            border-bottom: 1px solid #cccccc86;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item img {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: bold;
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .order-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .order-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cart Details</h1>
+
+    <div id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+
+    <div id="cart-total" class="cart-total">
+        Total: Rs0
+    </div>
+
+    <form action="/order" method="POST">
+        <button type="submit" id="order-button" class="order-button">Place Order</button>
+    </form>
+    <button type="submit"  class="order-button" onclick="clearCart()">Clear cart</button>
+
+    <script>
+        // Get cart items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Display cart items
+        const cartItemsContainer = document.getElementById('cart-items');
+        let total = 0;
+        cartItems.forEach(item => {
+            total += parseFloat(item.price);
+            const cartItemDiv = document.createElement('div');
+            cartItemDiv.classList.add('cart-item');
+
+            const img = document.createElement('img');
+            img.src = 'resources/hero-bg.jpg'; // Change to the actual image source
+            cartItemDiv.appendChild(img);
+
+            const detailsDiv = document.createElement('div');
+            detailsDiv.classList.add('cart-item-details');
+
+            const nameSpan = document.createElement('span');
+            nameSpan.classList.add('cart-item-name');
+            nameSpan.textContent = item.name;
+            detailsDiv.appendChild(nameSpan);
+
+            const priceSpan = document.createElement('span');
+            priceSpan.textContent = ` Rs${item.price}/-`;
+            detailsDiv.appendChild(priceSpan);
+
+            cartItemDiv.appendChild(detailsDiv);
+
+            cartItemsContainer.appendChild(cartItemDiv);
+        });
+
+        // Display total
+        const cartTotalElement = document.getElementById('cart-total');
+        cartTotalElement.textContent = `Total: Rs ${total.toFixed(2)}/-`;
+
+
+
+        function clearCart(){
+            localStorage.clear();
+            window.location.reload();
+        }
+        
+        
+        
+    </script>
+</body>
+
+</html>

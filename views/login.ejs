@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Login...</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cards">
+            <div class="login-container">
+                <h2>Login Form</h2>
+                <form action="/login" method="post">
+                    <input id="logUsername" type="text" name="username" placeholder="Username" required>
+                    <input id="logPassword" type="password" name="password" placeholder="Password" required>
+                    <input id="login" type="submit" value="Login">
+                </form>
+                <div class="social-icons">
+                    <a href="#" class="google-button"><i class="fab fa-google"></i></a>
+                    <a href="#" class="github-button"><i class="fab fa-github"></i></a>
+                    <a href="#" class="microsoft-button"><i class="fab fa-windows"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="signup-container sign_move">
+                <h2>Sign Up</h2>
+                <form id="signup">
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-icon">
+                        <i class="fas fa-lock"></i>
+                        <input id="pass" type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-icon">
+                        <i class="fas fa-lock"></i>
+                        <input id="conPass" type="password" name="confirm_password" placeholder="Confirm Password"
+                            required>
+                    </div>
+                    <input id="submit" type="submit" value="Sign Up">
+                </form>
+            </div>
+            <div class="cover">
+                <h4>Welcome to our login system...</h4>
+                <button class="btn"><span id="sspan">Sign up</span><span id="lspan" class="lspan">Login</span></button>
+
+                <div class="area">
+                    <ul class="squares">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/script1.js"></script>
+    <script src="js/val.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+/* CSS for devices with a minimum width of 768px (tablets and desktops) */
+@media screen and (max-width: 600px) {
+  /* Your CSS rules for tablets and desktops here */
+  #ul1 {
+    display: none;
+  }
+  .s2 {
+    margin: 1em 0;
+    padding: 1em 0px;
+  }
+  .chefs {
+    height: 100%;
+  }
+  .order {
+    justify-content: center;
+  }
+  #welcome {
+    font-family: 1em;
+  }
+
+  .chef-sec {
+    height: 100vh;
+    position: relative;
+  }
+  .uni_img {
+    border: none;
+    transform:scale(.9);
+
+  }
+  .left {
+    transform: translateX(0px) scale(.9);
+  }
+  .main{
+    text-align: center;
+  }
+}

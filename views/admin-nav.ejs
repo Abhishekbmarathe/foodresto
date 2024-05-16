@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="styles/utils.css">
+<header class="flex around">
+    <div>
+        <h1>Admin dashboard</h1>
+
+    </div>
+    <ul class="flex gap-3">
+        <li>Orders</li>
+        <li>Table bookings</li>
+        <li>Feed backs</li>
+        <li>Total Customers</li>
+        <form id="additems" action="/additems" method="post">
+            <li>Add items</li>
+        </form>
+    </ul>
+</header>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #101622f5;
+        color: white;
+    }
+
+    header {
+        background-color: rgb(55, 60, 80);
+        color: #ffffffb5;
+        text-align: center;
+        padding: 8px 0;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    h3 {
+        color: #ffffffb5;
+    }
+
+    ul li {
+        list-style: none;
+        cursor: pointer;
+        transition: color .2s linear;
+    }
+
+    li:hover {
+        color: #45acbd;
+    }
+</style>

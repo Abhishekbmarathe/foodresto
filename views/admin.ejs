@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="styles/utils.css">
+</head>
+
+<body>
+    <header class="flex around">
+        <div>
+            <h1>Admin dashboard</h1>
+
+        </div>
+        <ul class="flex gap-3">
+            <li>Orders</li>
+            <li>Table bookings</li>
+            <li>Feed backs</li>
+            <li>Total Customers</li>
+            <form id="additems" action="/additems" method="post">
+                <li>Add items</li>
+            </form>
+        </ul>
+    </header>
+    <center>
+        <h3>Order Details</h3>
+    </center>
+    <main>
+        <!-- <h2 style="text-align: center;">Orders</h2> -->
+        <section id="orders">
+            <% orders.forEach(order=> { %>
+
+                <div class="order-details">
+                    <!-- Order details will be dynamically generated here -->
+                    <div class="order">
+
+                        <p>Name: <span>
+                                <%= order.name %>
+                            </span></p>
+                        <p>Email: <span>
+                                <%= order.email %>
+                            </span></p>
+                        <p>Phone: <span>
+                                <%= order.phone %>
+                            </span></p>
+                        <p>Food: <span>
+                                <%= order.food %>
+                            </span></p>
+                        <p>Price: <span>
+                                <%= order.price %>/-
+                            </span></p>
+                        <p>Serves: <span>
+                                <%= order.serves %>
+                            </span></p>
+                        <p>Delivery: <span> <%= order.delivery %></span></p>
+                        <p>Address: <span> <%= order.address %></span></p>
+                        
+                        <div class="button">
+                            <button>Order full fill</button>
+                            <button class="deny" >Delete</button>
+                        </div>
+                    </div>
+                    <!-- box 2 -->
+                </div>
+                <% }) %>
+        </section>
+        <!-- Add more sections for different types of data (e.g., customers, products) -->
+    </main>
+
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="styles/myorders.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Orders</h1>
+        <div class="myOrders">
+            <% if (orders && orders.length> 0) { %>
+
+                <% orders.forEach(order=> { %>
+
+                    <div class="order-details">
+                        <!-- Order details will be dynamically generated here -->
+                        <div class="order">
+    
+                            <p>Name: <span>
+                                    <%= order.name %>
+                                </span></p>
+                            <p>Email: <span>
+                                    <%= order.email %>
+                                </span></p>
+                            <p>Phone: <span>
+                                    <%= order.phone %>
+                                </span></p>
+                            <p>Food: <span>
+                                    <%= order.food %>
+                                </span></p>
+                            <p>Price: <span>
+                                    <%= order.price %>/-
+                                </span></p>
+                            <p>Serves: <span>
+                                    <%= order.serves %>
+                                </span></p>
+                            <p>Delivery: <span> <%= order.delivery %></span></p>
+                            <p>Address: <span> <%= order.address %></span></p>
+                        </div>
+                        <!-- box 2 -->
+                    </div>
+                    <% }) %>
+            <% } else { %>
+             <h1>You have no orders yet</h1>
+             <%}%>
+
+    </div>
+  
+
+
+    <script src="js/myorders.js"></script>
+</body>
+</html>

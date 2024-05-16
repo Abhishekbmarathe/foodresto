@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #101622f5;
+  color: white;
+}
+
+header {
+  background-color: rgb(55, 60, 80);
+  color: #ffffffb5;
+  text-align: center;
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+h3{
+    color: #ffffffb5;
+}
+ul li{
+    list-style: none;
+    cursor: pointer;
+    transition: color .2s linear;
+}
+li:hover{
+    color: #45acbd;
+}
+
+main {
+  /* padding: 20px; */
+  width: 70%;
+  height: 70vh;
+  overflow-y: scroll;
+  /* border: 2px solid red; */
+  box-shadow: rgb(0, 0, 0) 0px 2px 8px 0px;
+  margin: auto;
+}
+main::-webkit-scrollbar{
+    width: 0;
+}
+center{
+
+    margin: 2em 0;
+}
+section {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.order-details {
+  width: 100%;
+}
+
+.order {
+  background-color: transparent;
+
+  border: 1px solid #333;
+  height: 1px;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #8d6a73;
+  width: 100%;
+  /* height: 400px; */
+  position: relative;
+}
+
+#orders {
+  display: block;
+  flex-direction: column;
+  gap: 1em;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+}
+
+.order h3 {
+  color: white;
+}
+
+.order p {
+  color: #ffffffb5;
+}
+
+span {
+  color: #45acbd;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.button {
+  width: fit-content;
+  margin: 10px 0;
+}
+
+button {
+  background-color: rgb(49, 68,208);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color .2s linear;
+}
+
+button:first-child:hover {
+  background-color: rgb(42, 206, 42);
+}
+
+button:last-child:hover {
+  background-color: rgb(236, 46, 46);
+}
+
+@media only screen and (max-width: 768px) {
+  .order-details {
+    grid-template-columns: 1fr;
+  }
+}

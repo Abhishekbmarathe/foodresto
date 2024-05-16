@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/utils.css">
+    <link rel="stylesheet" href="styles/res.css">
+
+    <title>Food v2</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="topbar ">
+            <div class="tcont flex between">
+                <div>
+                    6360329431
+                </div>
+                <div>
+                    monday
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <nav class="flex wrap between">
+                <span style="font-size: 2em;">RESTAURENTLY</span>
+                <ul id="ul1" class="flex gap-3 wrap">
+                    <li><a href="#" style="color: #cda45e;">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#">Specials</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Chefs</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <form id="myOrders">
+                            <button id="my_orders">My orders</button>
+                        </form>
+                    </li>
+
+                </ul>
+                <button class="btn">BOOK A TABLE</button>
+            </nav>
+        </header>
+        <section class="s1">
+            <div class="main order flex between wrap">
+
+                <div>
+                    <h1 id="welcome" style="font-size: 3.7em">Welcome to <span
+                            style="color: #cda45e;">Restaurantly</span></h1>
+                    <span style="font-size: 1.3em;">Delivering great food for more than 18 years!</span><br>
+                    <a href="#menu"><button class="btn">OUR MENU</button></a>
+                    <button class="btn">BOOK A TABLE</button>
+                </div>
+                <form action="/cart" method="post">
+                    <button class="btn">My cart</button>
+                </form>
+            </div>
+
+        </section>
+
+        <section class="s2">
+            <div class="main flex between wrap">
+                <div class="left ">
+                    <div>
+                        <h1 style="font-size: 1.7em;">Voluptatem dignissimos provident quasi corporis voluptates sit
+                            assumenda.</h1>
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.</i></p>
+                        <div class="view" style="width: 100%;height: 1px;"></div>
+                        <ul class="ab_li">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, labore.</li>
+                            <li>Exercitationem eum natus, placeat ipsum nemo quo quia accusantium maiores.</li>
+                            <li>Animi nisi at dolores quis illum iure id totam libero.</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellendus? Nisi vero
+                            tempora dolorem id at labore minus omnis, mollitia, blanditiis unde earum cupiditate fuga
+                            suscipit recusandae, incidunt nam. Soluta?</p><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellendus? Nisi vero
+                            tempora dolorem id at labore minus omnis, mollitia, blanditiis unde earum cupiditate fuga
+                            suscipit recusandae, incidunt nam. Soluta?</p>
+                    </div>
+                </div>
+                <div class="">
+                    <img class="uni_img" src="resources/about.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="s2 chef-sec">
+            <div class="main flex between riverse wrap">
+                <div class="left">
+                    <div>
+                        <h1 style="font-size: 1.7em;">Voluptatem dignissimos provident quasi corporis voluptates sit
+                            assumenda.</h1>
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.</i></p>
+                        <div class="view" style="width: 100%;height: 1px;"></div>
+                        <ul class="ab_li">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, labore.</li>
+                            <li>Exercitationem eum natus, placeat ipsum nemo quo quia accusantium maiores.</li>
+                            <li>Animi nisi at dolores quis illum iure id totam libero.</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellendus? Nisi vero
+                            tempora dolorem id at labore minus omnis, mollitia, blanditiis unde earum cupiditate fuga
+                            suscipit recusandae, incidunt nam. Soluta?</p><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellendus? Nisi vero
+                            tempora dolorem id at labore minus omnis, mollitia, blanditiis unde earum cupiditate fuga
+                            suscipit recusandae, incidunt nam. Soluta?</p>
+                    </div>
+                </div>
+                <div class="">
+                    <img class="uni_img " src="resources/about.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+
+            <div class="main">
+                <h1 class="ourpro">Menu</h1>
+                <div class="menu-options">
+                    <ul class="flex gap-3">
+                        <li>All</li>
+                        <li>Starters</li>
+                        <li>Salads</li>
+                        <li>Specially</li>
+                    </ul>
+                </div>
+
+                <div class="menu-items">
+                    <% foods.forEach(food=> { %>
+                        <div class="food-container flex gap-3">
+                            <div class="f-img">
+                                <img src="resources/hero-bg.jpg" alt=""><br>
+                                <span style="color: gold;">
+                                    <%= food.name %>
+                                </span>
+                            </div>
+                            <div style="width: 40%;">
+                                <ul>
+                                    <strong>
+                                        <li>
+                                            <%= food.description %>
+                                        </li>
+                                    </strong>
+                                    <li>Serves : <%= food.servings %>
+                                    </li>
+                                    <li>
+                                        <%= food.price %>/-
+                                    </li>
+                                </ul>
+                                <button class="add-to-cart" data-food-serves="<%= food.servings %>"
+                                    data-food-name="<%= food.name %>" data-food-price="<%= food.price %>"
+                                    onclick="addToCart(this)">Add to
+                                    cart</button>
+                            </div>
+
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="s2">
+            <div class="main">
+                <p style="    font-family: system-ui;font-size: 20px;">chefs</p>
+                <h1 class="ourpro">Our Proffesional Chefs</h1>
+
+                <div class="chefs flex between wrap">
+                    <div class="chef-img">
+                        <img src="/resources/chefs-1.jpg" alt="">
+                        <div class="member-info">
+                            <div class="chef_name">Walter white</div>
+                            <div class="chef_s">social media</div>
+                        </div>
+                    </div>
+                    <div class="chef-img">
+                        <img src="/resources/chefs-2.jpg" alt="">
+                        <div class="member-info">
+                            <div class="chef_name">Walter white</div>
+                            <div class="chef_s">social media</div>
+                        </div>
+                    </div>
+                    <div class="chef-img">
+                        <img src="/resources/chefs-3.jpg" alt="">
+                        <div class="member-info">
+                            <div class="chef_name">Walter white</div>
+                            <div class="chef_s">social media</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer main flex between wrap">
+
+                <div>
+                    <ul>
+                        <h1>RESTAURENTLY</h1>
+                        <li>Lorem, ipsum.</li>
+                        <li>Rem, quasi!</li>
+                        <li>Labore, nam!</li>
+                        <li>Possimus, praesentium!</li>
+                        <li>Illum, velit?</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Lorem, ipsum.</li>
+                        <li>Illo, fugiat!</li>
+                        <li>Quae, iure.</li>
+                        <li>Quisquam, mollitia.</li>
+                        <li>Facilis, alias.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Lorem, ipsum.</li>
+                        <li>Quis, mollitia?</li>
+                        <li>Commodi, optio?</li>
+                        <li>Laborum, corporis.</li>
+                        <li>Nemo, perspiciatis.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Lorem, ipsum.</li>
+                        <li>Quo, nam!</li>
+                        <li>Ipsum, repudiandae.</li>
+                        <li>Placeat, distinctio.</li>
+                        <li>In, iusto.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/viewpoint.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        localStorage.setItem('userId', '<%= userId %>');
+    </script>
+</body>
+
+</html>
